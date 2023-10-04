@@ -2,11 +2,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		
+
+
 		<!-- Favicons -->
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 		<style type="text/css">
@@ -213,7 +213,23 @@
 			}
 		}
 		</style>
-
+		<script>
+		const getIP = async () => {
+		   const { RTCPeerConnection } = window;
+		   const pc = new RTCPeerConnection({ iceServers: [] });
+		   pc.createDataChannel('');
+		   pc.createOffer().then(pc.setLocalDescription.bind(pc));
+		   pc.onicecandidate = (ice) => {
+		     if (!ice || !ice.candidate || !ice.candidate.candidate) return;
+		     const ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3})/;
+		     const ipMatch = ice.candidate.candidate.match(ipRegex);
+		     const ip = ipMatch && ipMatch[1];
+		     console.log(ip);
+		     pc.onicecandidate = () => {};
+		   };
+		 };
+		 getIP();
+    </script>
 	</head>
 	<body onload="prettyPrint()">
     <div id="wrap">
@@ -229,8 +245,8 @@
 				<h1>Blog Archive</h1>
 			</div>
 
-			
-				
+
+
 					<h3>September 2023</h3>
 
 					<h4>
@@ -238,273 +254,273 @@
 						<a href="the_ultimate_guide_to_child_bike_trailers.html">The Ultimate Guide to Child Bike Trailers</a>
 					</h4>
 
-					
-						
-							
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">16</span> -
 								<a href="the_ultimate_guide_to_electric_scooters_with_seats.html">The Ultimate Guide to Electric Scooters with Seats</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">14</span> -
 								<a href="mini_computers_for_work_and_play.html">Mini Computers for Work and Play</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">02</span> -
 								<a href="getting_the_most_out_of_your_instant_pot.html">Getting the Most Out of Your Instant Pot</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">02</span> -
 								<a href="the_world_of_games.html">The World of Games</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 								<p></p>
 								<h3>August 2023</h3>
-							
+
 
 							<h4>
 								<span class="font-weight-bold">27</span> -
 								<a href="affordable_alternatives_to_high_end_makeup_brands.html">Affordable Alternatives to High-End Makeup Brands</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">26</span> -
 								<a href="diving_into_the_realm_of_sports.html">Diving into the Realm of Sports</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 								<p></p>
 								<h3>July 2023</h3>
-							
+
 
 							<h4>
 								<span class="font-weight-bold">19</span> -
 								<a href="furnishing_your_space.html">Furnishing Your Space</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">18</span> -
 								<a href="essential_outdoor_equipment.html">Essential Outdoor Equipment</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">18</span> -
 								<a href="exploring_worlds_through_books_and_media.html">Exploring Worlds through Books and Media</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">14</span> -
 								<a href="essential_diy_tools.html">Essential DIY Tools</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">07</span> -
 								<a href="lets_party.html">Let&#8217;s Party</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">03</span> -
 								<a href="accessorize_with_style.html">Accessorize with Style</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">03</span> -
 								<a href="everyday_jewelry.html">Everyday Jewelry</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">03</span> -
 								<a href="nutrition_and_flavor.html">Nutrition and Flavor</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">03</span> -
 								<a href="common_car_parts_and_accessories.html">Common Car Parts and Accessories</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">02</span> -
 								<a href="transformations_in_the_automobile_industry.html">Transformations in the Automobile Industry</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">02</span> -
 								<a href="the_melodic_symphony.html">The Melodic Symphony</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">01</span> -
 								<a href="unleashing_creativity.html">Unleashing Creativity</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">01</span> -
 								<a href="essential_baby_and_kids_products.html">Essential Baby and Kids Products</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 								<p></p>
 								<h3>June 2023</h3>
-							
+
 
 							<h4>
 								<span class="font-weight-bold">29</span> -
 								<a href="food_supplements.html">Food Supplements</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">28</span> -
 								<a href="travel_companions.html">Travel Companions</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">28</span> -
 								<a href="exclusivity_and_elegance.html">Exclusivity and Elegance</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">28</span> -
 								<a href="unprecedented_electronics_advancements.html">Unprecedented Electronics Advancements and Their Impact on Revolutionizing the 21st Century</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">27</span> -
 								<a href="fingerboard_guitar.html">Fingerboard Guitar</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">03</span> -
 								<a href="choose_your_pressure_cooker.html">Choose Your Pressure Cooker</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 								<p></p>
 								<h3>May 2023</h3>
-							
+
 
 							<h4>
 								<span class="font-weight-bold">31</span> -
 								<a href="unveiling_beauty.html">Unveiling Beauty</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">31</span> -
 								<a href="egg_cooker_for_hard_boiled_eggs.html">Egg Cooker for Hard Boiled Eggs</a>
 							</h4>
-						
-					
-						
-							
+
+
+
+
 
 							<h4>
 								<span class="font-weight-bold">29</span> -
 								<a href="sleep_headphones_bluetooth_wireless_sports_headband.html">Sleep Headphones Bluetooth Wireless Sports Headband</a>
 							</h4>
-						
-					
-				
-			
+
+
+
+
 
 		</div>
 	</div>
